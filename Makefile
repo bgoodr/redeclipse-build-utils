@@ -16,6 +16,9 @@ update : $(BASE)
 	cd $(BASE); git checkout $(BRANCH)
 	cd $(BASE); git pull
 	cd $(BASE); git submodule update
+	if [ -d $(HOME)/.redeclipse -a ! -d $(BASE)/home ]; then \
+		cp -rp $(HOME)/.redeclipse $(BASE)/home; \
+	fi
 
 $(BASE) :
 	git clone --recursive https://github.com/red-eclipse/base.git $(BASE)
