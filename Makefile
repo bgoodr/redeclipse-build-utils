@@ -25,6 +25,10 @@ $(BASE) :
 sdl_config_package_stable = libsdl1.2-dev
 sdl_config_package_master = libsdl2-dev
 
+# Ditto for SDL_mixer.h :
+sdl_mixer_package_stable = libsdl-mixer1.2-dev
+sdl_mixer_package_master = libsdl2-mixer-dev
+
 .PHONY: packages
 packages :
-	sudo apt-get -y install git build-essential libsdl2-mixer-dev libsdl2-image-dev $(sdl_config_package_$(BRANCH))
+	sudo apt-get -y install git build-essential $(sdl_mixer_package_$(BRANCH)) libsdl2-image-dev $(sdl_config_package_$(BRANCH))
