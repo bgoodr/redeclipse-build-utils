@@ -15,6 +15,17 @@ To build the master branch, execute:
 
     BRANCH=master make
 
+Running
+=======
+
+Execute the stable branch build via:
+
+    run.sh stable
+
+Execute the master branch build via:
+
+    run.sh master
+
 References
 ==========
 
